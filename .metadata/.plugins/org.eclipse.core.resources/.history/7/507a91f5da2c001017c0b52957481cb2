@@ -1,0 +1,15 @@
+package TestRunnerPackage;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+@CucumberOptions(
+        features= {"C:\\Users\\SAMSUNG\\eclipse-workspace\\org.nareshit.seleniumpractice\\Feature"},    
+        glue= {"Stepdefinitions"},
+        monochrome=true,
+        tags="@smoketest",
+    plugin= {"pretty","html:target\\resultsOn09052025.html"}
+        ) 
+
+public class DataTable {
+
+}

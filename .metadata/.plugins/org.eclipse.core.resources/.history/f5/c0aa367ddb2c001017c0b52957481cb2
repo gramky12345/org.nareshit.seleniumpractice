@@ -1,0 +1,37 @@
+package StepDefinition;
+
+import java.util.Map;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+
+public class DataTableStepDefinition {
+	
+	WebDriver driver ;
+    @Given("User open Registration account page")
+    public void user_open_registration_account_page() throws Exception 
+    {
+       driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
+       Thread.sleep(5000);
+    }
+    @When("User enter below details")
+    public void user_enter_below_details(DataTable dataTable) throws Exception  
+    {
+        Map<String,String> map =dataTable.asMap(String.class,String.class);        
+        
+        /*System.out.println("first name is"+map.get("firstname"));
+        System.out.println("last name is"+map.get("lastname"));
+        System.out.println(" emailaddress is"+map.get("emailaddress"));
+        System.out.println("phonenumber is"+map.get("telophone"));
+        System.out.println("password is"+map.get("password"));*/
+        Thread.sleep(5000);
+        driver.findElement(By.name("firstname")).sendKeys(map.get("firstname"));
+        Thread.sleep(5000);
+        driver.findElement(By.name("lastname")).sendKeys(map.get("lastname"));
+
+
+}

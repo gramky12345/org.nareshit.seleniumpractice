@@ -1,0 +1,47 @@
+package StepDefinition;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.messages.types.Duration;
+
+public class LoginSteps {
+	@Given("user is on OrangeHRM Login page")
+	public void user_is_on_orange_hrm_login_page() {
+	    
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user enter valid username and password")
+	public void user_enter_valid_username_and_password() {
+		
+		WebDriver driver=new ChromeDriver();
+	       driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+	       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	       driver.manage().window().maximize();
+	    
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("user clicks on login button")
+	public void user_clicks_on_login_button() {
+	   
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("user should redirect to dashboard page")
+	public void user_should_redirect_to_dashboard_page() {
+	    
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("close the browser")
+	public void close_the_browser() {
+	   
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}
